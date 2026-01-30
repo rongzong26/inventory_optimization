@@ -1,0 +1,32 @@
+bundle:
+  name: inventory_optimization_buildathon
+
+resources:
+  apps:
+    inventory-optimization-app:
+      name: 'inventory-optimization-app'
+      source_code_path: ./app
+      description: "An inventory optimization app that uses a SQL warehouse and Genie"
+      resources:
+        - name: "sql-warehouse"
+          description: "A SQL warehouse for app to be able to work with"
+          sql_warehouse:
+            id: a2188971f887cd35
+            permission: "CAN_USE"
+        - name: "serving-endpoint"
+          description: "A serving endpoint for the app to use"
+          serving_endpoint:
+            name: databricks-claude-sonnet-4-5
+            permission: "CAN_QUERY"
+        # NOTE: Genie space dependency (not yet supported as bundle resource)
+        # Genie Space ID: 01f0fd5cc0c912fcbe49b206c5b467d6
+        # Permission required: CAN_USE or CAN_RUN
+        # Grant manually via Genie UI or run: ./scripts/grant_genie_permissions.sh
+        # Space URL: https://fe-sandbox-serverless-v7m02q.cloud.databricks.com/genie/rooms/01f0fd5cc0c912fcbe49b206c5b467d6
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://fe-sandbox-serverless-v7m02q.cloud.databricks.com

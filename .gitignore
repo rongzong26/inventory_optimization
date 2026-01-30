@@ -1,0 +1,129 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+*.env
+!.env.example
+
+# Databricks
+.databricks/
+
+# Debug and diagnostic files (exclude from repo)
+Debug_*.py
+*_Debug*.py
+debug_*.py
+Test_*.py
+test_*.py
+*_test*.py
+Grant_*.py
+grant_*.py
+Fix_*.py
+fix_*.py
+Find_*.py
+find_*.py
+Check_*.py
+check_*.py
+Verify_*.py
+verify_*.py
+Update_*.py
+update_*.py
+quick_test*.py
+*_diagnostic*.py
+*_troubleshoot*.py
+
+# Databricks notebooks for debugging/setup
+Deploy_Genie_Agent.py
+Create_Genie_Space.py
+Create_Sample_Data.py
+Table_Migration_Notebook.py
+embedded_chat_option.py
+databricks_connection.py
+migrate_tables.py
+
+# Temporary/backup files
+*.backup
+*.crashed
+*.old
+*.tmp
+
+# SQL debug files  
+verify_*.sql
+grant_simplified.sql
+copy_table.sql
+
+# Shell scripts for debugging
+verify_secret.sh
+check_agent_status.sh
+
+# Markdown documentation for debugging (keep main docs)
+*DEBUG*.md
+*TROUBLESHOOT*.md
+*FIX*.md
+*DIAGNOSIS*.md
+SEND_BUTTON_TROUBLESHOOTING.md
+RATE_LIMIT_FIX.md
+DICT_NOT_CALLABLE_FIX.md
+DATA_ACCESS_FIX.md
+APP_CRASH_DIAGNOSIS.md
+MLFLOW_SERIALIZATION_FIX.md
+AGENT_GENIE_PERMISSION_FIX.md
+GRANT_GENIE_ACCESS_STEPS.md
+GENIE_PERMISSIONS_GUIDE.md
+GENIE_RESOURCE_TRACKING.md
+PROGRESSIVE_GENIE_APPROACH.md
+PROGRESSIVE_GENIE_STATUS_COMPLETE.md
+AGENT_QUICK_START.md
+AGENT_PAT_AUTH_SETUP.md
+CREATE_PAT_INSTRUCTIONS.md
+setup_agent_auth.md
+update_endpoint_with_auth.py
+
+# Migration scripts (one-time use)
+export_import_tables.sh
+migrate_via_csv.sh
+
+# Agent framework files (if not using)
+switch_to_agent.sh
+rollback_to_direct_genie.sh
+
+# Databricks bundle cache
+.databricks/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
