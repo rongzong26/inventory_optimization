@@ -11,7 +11,7 @@ resources:
         - name: "sql-warehouse"
           description: "A SQL warehouse for app to be able to work with"
           sql_warehouse:
-            id: a2188971f887cd35
+            id: TBD_UPDATE_AFTER_AUTH
             permission: "CAN_USE"
         - name: "serving-endpoint"
           description: "A serving endpoint for the app to use"
@@ -29,4 +29,4 @@ targets:
     mode: development
     default: true
     workspace:
-      host: https://fe-sandbox-serverless-v7m02q.cloud.databricks.com
+      host: https://adb-984752964297111.11.azuredatabricks.net

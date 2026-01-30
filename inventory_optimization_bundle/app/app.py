@@ -9,8 +9,8 @@ from prompts import INVENTORY_RECOMMENDATION_PROMPT
 from chat_assistant import get_chat_response, get_quick_insights
 
 # Configuration - use environment variables for sensitive data
-HTTP_PATH = os.getenv("DATABRICKS_WAREHOUSE_HTTP_PATH", "/sql/1.0/warehouses/a2188971f887cd35")
-TABLE_NAME = os.getenv("DATABRICKS_TABLE_NAME", "`rz-demo-mining`.`supply-chain`.gold_master_part_inventory")
+HTTP_PATH = os.getenv("DATABRICKS_WAREHOUSE_HTTP_PATH", "/sql/1.0/warehouses/TBD_UPDATE_AFTER_AUTH")
+TABLE_NAME = os.getenv("DATABRICKS_TABLE_NAME", "rz_demo.supply_chain.gold_master_part_inventory")
 
 # Constants
 RISK_PRIORITY = {'Out of Stock': 1, 'Low Stock': 2, 'Stocked': 3}
