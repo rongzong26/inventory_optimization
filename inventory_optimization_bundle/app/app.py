@@ -9,7 +9,7 @@ from prompts import INVENTORY_RECOMMENDATION_PROMPT
 from chat_assistant import get_chat_response, get_quick_insights
 
 # Configuration - use environment variables for sensitive data
-HTTP_PATH = os.getenv("DATABRICKS_WAREHOUSE_HTTP_PATH", "/sql/1.0/warehouses/TBD_UPDATE_AFTER_AUTH")
+HTTP_PATH = os.getenv("DATABRICKS_WAREHOUSE_HTTP_PATH", "/sql/1.0/warehouses/148ccb90800933a1")
 TABLE_NAME = os.getenv("DATABRICKS_TABLE_NAME", "rz_demo.supply_chain.gold_master_part_inventory")
 
 # Constants

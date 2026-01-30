@@ -11,7 +11,7 @@ resources:
         - name: "sql-warehouse"
           description: "A SQL warehouse for app to be able to work with"
           sql_warehouse:
-            id: TBD_UPDATE_AFTER_AUTH
+            id: 148ccb90800933a1
             permission: "CAN_USE"
         - name: "serving-endpoint"
           description: "A serving endpoint for the app to use"
