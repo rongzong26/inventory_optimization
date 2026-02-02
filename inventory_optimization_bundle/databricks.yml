@@ -11,7 +11,7 @@ resources:
         - name: "sql-warehouse"
           description: "A SQL warehouse for app to be able to work with"
           sql_warehouse:
-            id: 148ccb90800933a1
+            id: a2188971f887cd35
             permission: "CAN_USE"
         - name: "serving-endpoint"
           description: "A serving endpoint for the app to use"
@@ -19,14 +19,14 @@ resources:
             name: databricks-claude-sonnet-4-5
             permission: "CAN_QUERY"
         # NOTE: Genie space dependency (not yet supported as bundle resource)
-        # Genie Space ID: 01f0fe11faaf1757941b620cb450e408
+        # Genie Space ID: 01f0fd5cc0c912fcbe49b206c5b467d6
         # Permission required: CAN_USE or CAN_RUN
-        # Grant manually via Genie UI after deployment
-        # Space URL: https://adb-984752964297111.11.azuredatabricks.net/genie/rooms/01f0fe11faaf1757941b620cb450e408
+        # Grant manually via Genie UI or use grant_genie_permissions.sh
+        # Space URL: https://fe-sandbox-serverless-v7m02q.cloud.databricks.com/genie/rooms/01f0fd5cc0c912fcbe49b206c5b467d6
 
 targets:
   dev:
     mode: development
     default: true
     workspace:
-      host: https://adb-984752964297111.11.azuredatabricks.net
+      host: https://fe-sandbox-serverless-v7m02q.cloud.databricks.com
