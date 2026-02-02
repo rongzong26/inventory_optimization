@@ -37,14 +37,14 @@ def create_header():
     current_date = datetime.now().strftime("%B %d, %Y")
     
     return html.Div([
-        # Agnico Eagle branding on the left with official logo
+        # Agnico Eagle branding on the left with official eagle logo
         html.Div([
             html.Div([
-                # Official Agnico Eagle logo (AEM)
+                # Official Agnico Eagle logo (eagle shape)
                 html.Img(
-                    src='/assets/agnico_eagle_logo.svg',
+                    src='/assets/agnico_eagle_logo.png',
                     style={
-                        'height': '50px', 'marginRight': '0px', 'verticalAlign': 'middle'
+                        'height': '60px', 'marginRight': '0px', 'verticalAlign': 'middle'
                     }
                 )
             ], style={'marginBottom': '4px'}),
