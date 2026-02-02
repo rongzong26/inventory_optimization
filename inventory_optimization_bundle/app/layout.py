@@ -35,6 +35,8 @@ def create_modal(modal_id, title, content, button_ids, button_labels, display='n
 def create_header():
     # Get current date dynamically
     current_date = datetime.now().strftime("%B %d, %Y")
+    # Lighter banner color
+    header_bg_color = '#1e4a5a'
     
     return html.Div([
         # Agnico Eagle branding on the left with official eagle logo
@@ -44,19 +46,26 @@ def create_header():
                 html.Img(
                     src='/assets/agnico_eagle_logo.png',
                     style={
-                        'height': '60px', 'marginRight': '0px', 'verticalAlign': 'middle'
+                        'height': '60px', 'marginRight': '15px', 'verticalAlign': 'middle', 'display': 'inline-block'
                     }
-                )
-            ], style={'marginBottom': '4px'}),
-            html.Div(current_date, style={
-                'color': DB_COLORS['off_white'], 'fontSize': '14px', 
-                'fontWeight': '500', **FONT_STYLE
-            })
+                ),
+                # Company name next to logo
+                html.Div([
+                    html.Div("AGNICO EAGLE", style={
+                        'fontSize': '22px', 'fontWeight': '700', 'color': '#FFCF00',
+                        'letterSpacing': '1px', 'marginBottom': '2px', **FONT_STYLE
+                    }),
+                    html.Div(current_date, style={
+                        'color': DB_COLORS['off_white'], 'fontSize': '13px', 
+                        'fontWeight': '500', **FONT_STYLE
+                    })
+                ], style={'display': 'inline-block', 'verticalAlign': 'middle'})
+            ], style={'display': 'flex', 'alignItems': 'center'})
         ], style={
             'position': 'absolute', 'left': '30px', 'top': '50%', 'transform': 'translateY(-50%)', 'zIndex': '10'
         }),
         html.H1("Inventory Optimization Control Center", style={
-            'textAlign': 'center', 'padding': '30px 20px', 'margin': '0', 'backgroundColor': DB_COLORS['dark'],
+            'textAlign': 'center', 'padding': '30px 20px', 'margin': '0', 'backgroundColor': header_bg_color,
             'color': DB_COLORS['off_white'], 'fontWeight': '700', 'fontSize': '32px', **FONT_STYLE}),
         html.Div([
             html.Button([
@@ -74,7 +83,7 @@ def create_header():
                 'fontSize': '14px', **FONT_STYLE
             })
         ], style={'position': 'absolute', 'right': '30px', 'top': '50%', 'transform': 'translateY(-50%)', 'zIndex': '10'})
-    ], style={'position': 'relative', 'backgroundColor': DB_COLORS['dark'], 'minHeight': '90px'})
+    ], style={'position': 'relative', 'backgroundColor': header_bg_color, 'minHeight': '90px'})
 
 def create_filter_dropdown(label, filter_id, options, placeholder):
     return html.Div([
@@ -170,7 +179,7 @@ def create_embedded_chat():
                 'justifyContent': 'space-between',
                 'alignItems': 'center',
                 'padding': '15px 20px',
-                'backgroundColor': DB_COLORS['dark'],
+                'backgroundColor': '#1e4a5a',
                 'borderBottom': '1px solid #ddd'
             }),
             
