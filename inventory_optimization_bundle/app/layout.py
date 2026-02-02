@@ -37,9 +37,25 @@ def create_header():
     current_date = datetime.now().strftime("%B %d, %Y")
     
     return html.Div([
-        html.Div(current_date, style={'position': 'absolute', 'left': '30px', 'top': '50%', 
-                'transform': 'translateY(-50%)', 'color': DB_COLORS['off_white'], 'fontSize': '18px', 
-                'fontWeight': '600', 'zIndex': '10', **FONT_STYLE}),
+        # Agnico Eagle branding on the left with official logo
+        html.Div([
+            html.Div([
+                # Official Agnico Eagle logo
+                html.Img(
+                    src='https://s21.q4cdn.com/374334112/files/images/AgnicoClientLogo.png',
+                    style={
+                        'height': '50px', 'marginRight': '0px', 'verticalAlign': 'middle',
+                        'filter': 'brightness(0) invert(1)'  # Make logo white for dark background
+                    }
+                )
+            ], style={'marginBottom': '4px'}),
+            html.Div(current_date, style={
+                'color': DB_COLORS['off_white'], 'fontSize': '14px', 
+                'fontWeight': '500', **FONT_STYLE
+            })
+        ], style={
+            'position': 'absolute', 'left': '30px', 'top': '50%', 'transform': 'translateY(-50%)', 'zIndex': '10'
+        }),
         html.H1("Inventory Optimization Control Center", style={
             'textAlign': 'center', 'padding': '30px 20px', 'margin': '0', 'backgroundColor': DB_COLORS['dark'],
             'color': DB_COLORS['off_white'], 'fontWeight': '700', 'fontSize': '32px', **FONT_STYLE}),

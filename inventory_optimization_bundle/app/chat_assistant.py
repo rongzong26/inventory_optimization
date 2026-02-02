@@ -5,7 +5,7 @@ import requests
 from databricks.sdk.core import Config
 
 # Genie Space Configuration  
-GENIE_SPACE_ID = "01f0fd5cc0c912fcbe49b206c5b467d6"
+GENIE_SPACE_ID = "01f0fe11faaf1757941b620cb450e408"
 
 
 def query_genie(user_message: str, conversation_id: str = None) -> dict:
