@@ -40,12 +40,11 @@ def create_header():
         # Agnico Eagle branding on the left with official logo
         html.Div([
             html.Div([
-                # Official Agnico Eagle logo
+                # Official Agnico Eagle logo (AEM)
                 html.Img(
-                    src='https://s21.q4cdn.com/374334112/files/images/AgnicoClientLogo.png',
+                    src='/assets/agnico_eagle_logo.svg',
                     style={
-                        'height': '50px', 'marginRight': '0px', 'verticalAlign': 'middle',
-                        'filter': 'brightness(0) invert(1)'  # Make logo white for dark background
+                        'height': '50px', 'marginRight': '0px', 'verticalAlign': 'middle'
                     }
                 )
             ], style={'marginBottom': '4px'}),
